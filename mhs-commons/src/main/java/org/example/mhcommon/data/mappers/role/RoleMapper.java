@@ -34,7 +34,7 @@ public abstract class RoleMapper extends BaseMap<RoleRequest, RoleResponse, Role
 
     public List<RoleResponse> toResponses(List<Role> roles,
                                           @Context List<RolePermission> rolePermissions,
-                                          @Context Map<Integer, Permission> permissionMap){
+                                          @Context Map<Long, Permission> permissionMap){
 
         Map<Integer, List<Permission>> rolePermissionMap = rolePermissions.stream()
                 .filter(rp -> permissionMap.containsKey(rp.getPerId().intValue()))
@@ -43,7 +43,7 @@ public abstract class RoleMapper extends BaseMap<RoleRequest, RoleResponse, Role
                         mapping(rp -> permissionMap.get(rp.getPerId().intValue()), toList())));
 
         return roles.stream()
-                .map(role -> toResponse(role, rolePermissionMap.getOrDefault(role.getId().longValue(), new ArrayList<>())))
+                .map(role -> toResponse(role, rolePermissionMap.getOrDefault(role.getId(), new ArrayList<>())))
                 .collect(Collectors.toList());
     }
 }

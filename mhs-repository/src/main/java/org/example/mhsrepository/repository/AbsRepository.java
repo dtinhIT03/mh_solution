@@ -3,6 +3,7 @@ package org.example.mhsrepository.repository;
 import jakarta.annotation.PostConstruct;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
+import org.example.mhcommon.core.exception.DBException;
 import org.example.mhcommon.data.model.SearchRequest;
 import org.example.mhsrepository.repository.utils.PostgresUtil;
 import org.jooq.*;
@@ -13,11 +14,13 @@ import org.jooq.impl.TableRecordImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.ParameterizedType;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.google.common.collect.Lists.partition;
 import static org.apache.commons.lang3.StringUtils.isEmpty;
+import static org.example.mhcommon.data.constant.message.MessageResponse.ID_MUST_NOT_BE_NULL;
 
 @Log4j2
 public abstract class AbsRepository<R extends TableRecordImpl<R>,P,ID> implements IBaseRepository<P, ID> {
@@ -67,12 +70,27 @@ public abstract class AbsRepository<R extends TableRecordImpl<R>,P,ID> implement
 
     @Override
     public Integer update(P pojo, ID id) {
-        return null;
+        if(fieldID != null) {
+            Map<Field<?>, Object> mapFieldObject =  PostgresUtil.toInsertQueries(record,pojo);
+            return dslContext.update(getTable())
+                    .set(mapFieldObject)
+                    .where(fieldID.eq(id))
+                    .execute();
+        }else{
+            throw new DBException(ID_MUST_NOT_BE_NULL);
+        }
     }
 
     @Override
     public Integer delete(ID id) {
-        return null;
+        if(fieldID != null){
+            return dslContext.update(getTable())
+                    .set(DSL.field("deleted_at"), LocalDateTime.now())
+                    .where(fieldID.eq(id))
+                    .execute();
+        }else{
+            throw new DBException(ID_MUST_NOT_BE_NULL);
+        }
     }
 
     @Override

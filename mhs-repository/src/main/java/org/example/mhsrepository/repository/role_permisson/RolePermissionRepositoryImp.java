@@ -26,7 +26,7 @@ public class RolePermissionRepositoryImp extends AbsRepository<RolePermissionRec
                 .on(Tables.PERMISSION.ID.eq(Tables.ROLE_PERMISSION.PER_ID.cast(Long.class)))
                 .join(Tables.ROLE)
                 .on(Tables.ROLE.ID.eq(Tables.ROLE_PERMISSION.ROLE_ID.cast(Long.class)))
-                .where(Tables.ROLE.ROLE_NAME.in(roles).and(Tables.PERMISSION.ACTION_CODE.like(permissionCode)))
+                .where(Tables.ROLE.ROLE_NAME.in(roles).and(Tables.PERMISSION.ACTION_CODE.like(permissionCode+"%")))
                 .fetchInto(String.class);
     }
 

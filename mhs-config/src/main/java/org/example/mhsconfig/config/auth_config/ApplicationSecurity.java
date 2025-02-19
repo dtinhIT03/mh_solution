@@ -37,7 +37,7 @@ public class ApplicationSecurity {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authEntryPointJwt))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/**", "/login", "/user/authenticate").permitAll()
-                        .anyRequest().permitAll()
+                        .anyRequest().authenticated()
                 )
                 .httpBasic(AbstractHttpConfigurer::disable) // ❌ Disable Basic Authentication
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

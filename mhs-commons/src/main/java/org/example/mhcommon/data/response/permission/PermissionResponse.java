@@ -1,8 +1,12 @@
 package org.example.mhcommon.data.response.permission;
 
+import lombok.Data;
+import org.example.mhcommon.data.response.BaseResponse;
+
 import java.time.LocalDateTime;
 
-public class PermissionResponse {
+@Data
+public class PermissionResponse extends BaseResponse {
     private Long id;
     private String actionName;
     private String actionCode;

@@ -1,12 +1,13 @@
 package org.example.mhapi.service.cms;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.mhcommon.data.constant.message.MessageResponse;
+import org.example.mhcommon.core.exception.DBException;
 import org.example.mhcommon.data.mappers.BaseMap;
 import org.example.mhcommon.data.model.paging.Page;
 import org.example.mhcommon.data.model.SearchRequest;
 import org.example.mhcommon.data.model.user.UserAuthorDTO;
 import org.example.mhcommon.data.response.BaseResponse;
+import org.example.mhcommon.data.response.MessageResponse;
 import org.example.mhsconfig.config.exception.ApiException;
 import org.example.mhcommon.data.constant.ActionConstant;
 
@@ -16,12 +17,13 @@ import org.example.mhsconfig.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static org.example.mhcommon.data.constant.message.BaseConstant.UPDATE_FAIL;
+import static org.example.mhcommon.data.constant.message.BaseConstant.*;
 
 
 @Slf4j
@@ -94,12 +96,41 @@ public abstract class AbsCmsService<Rq , Rp extends BaseResponse, Po,ID,Repo ext
 
     @Override
     public MessageResponse deleteById(ID id, Authentication authentication) throws ApiException {
-        return null;
+        try{
+            Set<String> actions =  checkPermissionDelete(authentication);
+            //check quuyen , neu co thi cho xoa, check so ban ghi bi xoa, build message ra
+            Integer deletedRow = repository.delete(id);
+            if(deletedRow < 1){
+                throw new DBException(DELETE_FAIL);
+            }
+            MessageResponse response = new MessageResponse("SUCCESS");
+            response.setItemPermissions(actions);
+            return response;
+        }
+        catch (Exception e){
+            log.error("[ERROR] deleteById {} " + e.getMessage());
+            throw new DBException(DELETE_FAIL);
+        }
+
     }
 
     @Override
     public Page<Rp> search(SearchRequest searchRequest) {
-        return null;
+        try{
+            List<Po> items = repository.search(searchRequest);
+            Long total = repository.count(searchRequest);
+            List<Rp> rps = mapper.toResponses(items);
+            return new Page<Rp>()
+                    .setKey(searchRequest.getKeyword())
+                    .setPage(searchRequest.getPage())
+                    .setItems(rps)
+                    .setTotal(total);
+
+        }
+        catch (Exception e){
+            throw new ApiException(SEARCH_FAIL);
+        }
+
     }
     private Set<String> checkPermitAction(String view,String message,Authentication authentication){
         Set<String> actions =  getPermitAction(authentication);

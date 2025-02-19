@@ -1,7 +1,11 @@
 package org.example.mhcommon.data.request.permission;
 
-import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.experimental.Accessors;
 
+import java.time.LocalDateTime;
+@Data
+@Accessors(chain = true)
 public class PermissionRequest {
     private Long id;
     private String actionName;
