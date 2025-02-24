@@ -47,14 +47,14 @@ public class UserRepositoryImp extends AbsRepository<UserRecord, User,Long> impl
     }
 
     @Override
-    public List<Role> getRoles(Integer userId) {
+    public List<Role> getRoles(Long userId) {
         return dslContext.select(Tables.ROLE)
                 .from(Tables.ROLE)
                 .join(Tables.USER_ROLE)
-                .on(Tables.ROLE.ID.eq((Select<? extends Record1<Long>>) Tables.USER_ROLE.ROLE_ID))
+                .on(Tables.ROLE.ID.eq(Tables.USER_ROLE.ROLE_ID.cast(Long.class)))
                 .join(Tables.USER)
-                .on(Tables.USER.ID.eq((Select<? extends Record1<Long>>) Tables.USER_ROLE.USER_ID))
-                .where(Tables.USER.ID.eq(Long.valueOf(userId)))
+                .on(Tables.USER.ID.eq(Tables.USER_ROLE.USER_ID.cast(Long.class)))
+                .where(Tables.USER.ID.eq(userId))
                 .fetchInto(Role.class);
     }
 

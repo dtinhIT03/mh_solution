@@ -27,9 +27,7 @@ public class AuthController {
     //logout
     @GetMapping("cms/auth/logout")
     public DfResponse<TokenResponse> logout(HttpServletRequest request){
-        String header = request.getHeader("Authorization");
-        String token = header.split(" ")[1].trim();
-        TokenResponse tokenResponse = new TokenResponse(token);
+        TokenResponse tokenResponse = authServiceImp.logoutToken(request);
         return DfResponse.ok(tokenResponse);
 
     }

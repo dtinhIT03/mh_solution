@@ -49,13 +49,12 @@ public class JobRecruitmentServiceImp extends AbsService<JobRecruitmentRequest, 
             List<Job> jobList =  repository.search(searchRequest);
             Long total = repository.count(searchRequest);
             List<JobRecruitmentResponse> jobRecruitmentResponses = mapper.toResponses(jobList);
-            return new Page<JobRecruitmentResponse>()
-                    .setTotal(total)
-                    .setItems(jobRecruitmentResponses);
+            return new Page<JobRecruitmentResponse>(total,searchRequest,jobRecruitmentResponses);
         }catch (Exception exception){
             log.error("[ERROR] search {} " + exception.getMessage());
             return new Page<JobRecruitmentResponse>()
                     .setTotal(0L)
+                    .setPage(searchRequest.getPage())
                     .setItems(new ArrayList<>());
         }
 

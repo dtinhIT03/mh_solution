@@ -54,6 +54,8 @@ public class JwtFilter extends OncePerRequestFilter {
         }
         //set authentication context
         setAuthenticationContext(token,request);
+        log.info("Authentication for user: {}", SecurityContextHolder.getContext().getAuthentication());
+
         filterChain.doFilter(request,response);
     }
     private boolean hasAuthorizationBearer(HttpServletRequest request){

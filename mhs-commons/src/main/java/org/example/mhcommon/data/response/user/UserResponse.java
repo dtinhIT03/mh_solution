@@ -14,14 +14,11 @@ public class UserResponse extends BaseResponse {
     private String phone;
     private String email;
     private String content;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private String facebookLink;
     private String alias;
     private String empCode;
     private String avatar;
     private LocalDateTime regisDate;
-    private String password;
     private String role;
     private List<RoleResponse> roles;
 }

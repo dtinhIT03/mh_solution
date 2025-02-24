@@ -1,6 +1,7 @@
 package org.example.mhapi.service.cms;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.mhapi.service.cms.test.TestService;
 import org.example.mhcommon.core.exception.DBException;
 import org.example.mhcommon.data.mappers.BaseMap;
 import org.example.mhcommon.data.model.paging.Page;
@@ -17,10 +18,7 @@ import org.example.mhsconfig.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.example.mhcommon.data.constant.message.BaseConstant.*;
@@ -33,7 +31,9 @@ public abstract class AbsCmsService<Rq , Rp extends BaseResponse, Po,ID,Repo ext
     protected Mp mapper;
     protected Repo repository;
     @Autowired
-    RolePermissionRepositoryImp rolePermissionRepositoryImp;
+    protected RolePermissionRepositoryImp rolePermissionRepositoryImp;
+    @Autowired
+    TestService testService;
 
     @Override
     public Rp insert(Rq request, Authentication authentication) throws ApiException {
@@ -57,7 +57,8 @@ public abstract class AbsCmsService<Rq , Rp extends BaseResponse, Po,ID,Repo ext
     @Override
     public Rp findById(ID id, Authentication authentication) throws ApiException {
         Set<String> actions = checkPermissionGet(authentication);
-        return getById(id, actions);
+        Rp rp = getById(id, actions);
+        return rp;
     }
 
     @Override
@@ -144,6 +145,21 @@ public abstract class AbsCmsService<Rq , Rp extends BaseResponse, Po,ID,Repo ext
     protected Set<String> getPermitAction(Authentication authentication){
         UserAuthorDTO userAuthorDTO = SecurityUtils
                 .extractUser(authentication);
+        Optional<ArrayList<String>> listPer = testService.getListActionCode();
+        if(!listPer.isEmpty()){
+            String permissionCode = getPermissionCode() + ".";
+
+            return listPer.get().stream()
+                    .map(s -> {
+                        if (s.startsWith(permissionCode)) {
+                            return s.substring(permissionCode.length()); // Remove permissionCode + "."
+                        }
+                        return null; // If the string doesn't start with permissionCode, return null
+                    })
+                    .filter(Objects::nonNull) // Filter out nulls
+                    .collect(Collectors.toSet());
+        }
+
         return rolePermissionRepositoryImp.getPermission( getPermissionCode(),userAuthorDTO.getRoles())
                 .stream()
                 .map(s -> {

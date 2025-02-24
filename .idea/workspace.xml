@@ -5,32 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd269ed-d033-4944-ab66-6a57274d8c14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/permission/PermissionCmsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/role/RoleCmsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/permission/IPermissionCmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/permission/PermissionCmsServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/IRoleCmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/constant/message/role/RoleConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/request/role_permission/RolePermissionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/role_permission/RolePermissionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/utils/CollectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/permission/IPermissionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/permission/PermissionRepositoryImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role/IRoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role/RoleRepositoryImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/test/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/test/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mhs-redis/src/main/java/org/example/mhsredis/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mhs-redis/src/main/java/org/example/mhsredis/service/BaseRedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mhs-redis/src/main/java/org/example/mhsredis/service/imp/BaseRedisServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/job_recruitment/JobRecruitmentCmsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/job_recruitment/JobRecruitmentCmsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/api/job/JobRecruitmentServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/api/job/JobRecruitmentServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/ICmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/ICmsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/mappers/role/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/mappers/role/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/mappers/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/mappers/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/request/permission/PermissionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/request/permission/PermissionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/permission/PermissionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/permission/PermissionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/IAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/IAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/IRoleCmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/IRoleCmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/role/RoleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/role/RoleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/user/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-commons/src/main/java/org/example/mhcommon/data/response/user/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/MhsConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/MhsConfigApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/ApplicationSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/ApplicationSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/AbsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/AbsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role_permisson/RolePermissionRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role_permisson/RolePermissionRepositoryImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/user/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/user/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/user/UserRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/user/UserRepositoryImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -67,53 +68,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mh_solution [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mh_solution [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-api [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-api [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-api [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-commons [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-commons [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-commons [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-commons [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-config [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-config [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-config [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-repository [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-repository [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-repository [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mhs-repository [package].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.MhsCommonsApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.MhsRepositoryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.mh_solutionApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MH_SOLUTION/mh_solution/mhs-commons/src/main/java/org/example/mhcommon/data/model/user&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;F:/MH_SOLUTION/mh_solution/data/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.mh_solution [clean].executor": "Run",
+    "Maven.mh_solution [compile].executor": "Run",
+    "Maven.mh_solution [install].executor": "Run",
+    "Maven.mhs-api [clean].executor": "Run",
+    "Maven.mhs-api [compile].executor": "Run",
+    "Maven.mhs-api [install].executor": "Run",
+    "Maven.mhs-commons [clean].executor": "Run",
+    "Maven.mhs-commons [compile].executor": "Run",
+    "Maven.mhs-commons [install].executor": "Run",
+    "Maven.mhs-commons [test].executor": "Run",
+    "Maven.mhs-config [clean].executor": "Run",
+    "Maven.mhs-config [compile].executor": "Run",
+    "Maven.mhs-config [install].executor": "Run",
+    "Maven.mhs-redis [clean].executor": "Run",
+    "Maven.mhs-redis [compile].executor": "Run",
+    "Maven.mhs-redis [install].executor": "Run",
+    "Maven.mhs-repository [clean].executor": "Run",
+    "Maven.mhs-repository [compile].executor": "Run",
+    "Maven.mhs-repository [install].executor": "Run",
+    "Maven.mhs-repository [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MhsCommonsApplication.executor": "Debug",
+    "Spring Boot.MhsRepositoryApplication.executor": "Run",
+    "Spring Boot.mh_solutionApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/MH_SOLUTION/mh_solution/mhs-commons/src/main/java/org/example/mhcommon/data/model/user",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "F:/MH_SOLUTION/mh_solution/data/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\MH_SOLUTION\mh_solution\mhs-commons\src\main\java\org\example\mhcommon\data\model\user" />
@@ -165,6 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MhsRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mhs-redis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.mhsredis.MhsRedisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MhsRepositoryApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="mhs-repository" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.mhsrepository.MhsRepositoryApplication" />
@@ -211,6 +223,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.MhsRedisApplication" />
       <item itemvalue="Spring Boot.MhsConfigApplication" />
       <item itemvalue="Spring Boot.MhsRepositoryApplication (1)" />
       <item itemvalue="Spring Boot.MhsCommonsApplication" />
@@ -256,7 +269,13 @@
       <workItem from="1739674050162" duration="7454000" />
       <workItem from="1739757361233" duration="26178000" />
       <workItem from="1739854602079" duration="16410000" />
-      <workItem from="1739929569794" duration="6450000" />
+      <workItem from="1739929569794" duration="13170000" />
+      <workItem from="1739974374722" duration="3444000" />
+      <workItem from="1740016237421" duration="2571000" />
+      <workItem from="1740063317869" duration="748000" />
+      <workItem from="1740102110924" duration="359000" />
+      <workItem from="1740188408648" duration="11406000" />
+      <workItem from="1740362444188" duration="16400000" />
     </task>
     <servers />
   </component>
@@ -303,26 +322,6 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/auth/AuthServiceImp.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/utils/SecurityUtils.java</url>
           <line>9</line>
           <option name="timeStamp" value="17" />
@@ -336,26 +335,6 @@
           <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/utils/SecurityUtils.java</url>
           <line>10</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role_permisson/RolePermissionRepositoryImp.java</url>
@@ -394,17 +373,88 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="42" />
+          <line>65</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
-          <line>63</line>
-          <properties class="org.example.mhapi.service.cms.role.RoleCmsServiceImp" method="findById">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="27" />
+          <line>66</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/job_recruitment/JobRecruitmentCmsController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/test/TestService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/test/TestService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/test/TestService.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mhs-config/src/main/java/org/example/mhsconfig/config/auth_config/JwtFilter.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mhs-repository/src/main/java/org/example/mhsrepository/repository/role_permisson/RolePermissionRepositoryImp.java</url>
@@ -415,6 +465,55 @@
           </properties>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/role/RoleCmsServiceImp.java</url>
+          <line>63</line>
+          <properties class="org.example.mhapi.service.cms.role.RoleCmsServiceImp" method="findById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>144</line>
+          <properties class="org.example.mhapi.service.cms.AbsCmsService" method="getPermitAction">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>57</line>
+          <properties class="org.example.mhapi.service.cms.AbsCmsService" method="findById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/controller/cms/job_recruitment/JobRecruitmentCmsController.java</url>
+          <line>20</line>
+          <properties class="org.example.mhapi.controller.cms.job_recruitment.JobRecruitmentCmsController" method="detail">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mhs-api/src/main/java/org/example/mhapi/service/cms/AbsCmsService.java</url>
+          <line>38</line>
+          <properties class="org.example.mhapi.service.cms.AbsCmsService" method="insert">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.fasterxml.jackson.databind.exc.InvalidDefinitionException" package="com.fasterxml.jackson.databind.exc" />
+          <option name="timeStamp" value="49" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

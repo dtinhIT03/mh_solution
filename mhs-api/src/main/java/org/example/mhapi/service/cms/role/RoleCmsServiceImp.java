@@ -111,4 +111,19 @@ public class RoleCmsServiceImp extends AbsCmsService<RoleRequest, RoleResponse, 
         repositoryImp.deleteByIds(oldPerIdsDelete,request.getRoleId());
         return new MessageResponse("update permission success!");
     }
+
+    @Override
+    public Set<String> getListActionCode(Long roleId) {
+        try {
+            //check per, tim role, tim per, map sang res
+            Optional<Role> role = repository.findById(roleId);
+            if(role.isEmpty()){
+                throw new ApiException(ROLE_NOT_FOUND);
+            }
+            List<Permission> permissions = repository.getPermissions(roleId.intValue());
+            return permissions.stream().map(per -> per.getActionCode()).collect(Collectors.toSet());
+        }catch (ApiException e){
+            log.error("[ERROR] findById {} " + e.getMessage());
+            throw new ApiException(ROLE_NOT_FOUND);
+        }    }
 }

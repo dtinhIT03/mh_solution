@@ -36,7 +36,7 @@ public class ApplicationSecurity {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authEntryPointJwt))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/**", "/login", "/user/authenticate").permitAll()
+                        .requestMatchers("/api/**", "/login", "/user/authenticate","/register").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(AbstractHttpConfigurer::disable) // ❌ Disable Basic Authentication

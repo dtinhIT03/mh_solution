@@ -27,7 +27,7 @@ public interface IUserRepository {
      * params : userId
      * return List<Role>
      */
-    List<Role> getRoles(Integer userId);
+    List<Role> getRoles(Long userId);
     /**
      * method getRoleByUserIds
      * params List<Integer>

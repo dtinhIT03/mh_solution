@@ -1,5 +1,6 @@
 package org.example.mhapi.service.cms.auth;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.el.parser.Token;
 import org.example.mhcommon.data.request.auth.LoginRequest;
 import org.example.mhcommon.data.request.user.UserRequest;
@@ -20,4 +21,6 @@ public interface IAuthService {
      * return: token response
      */
     TokenResponse refreshToken(String token);
+
+    TokenResponse logoutToken(HttpServletRequest request);
 }

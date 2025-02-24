@@ -19,6 +19,7 @@
         <module>mhs-config</module>
         <module>mhs-repository</module>
         <module>mhs-commons</module>
+        <module>mhs-redis</module>
     </modules>
     <build>
         <plugins>
